@@ -31,12 +31,17 @@ public class UserClient {
 	@Test
 	public void daoTest() {
 		UserDao dao=context.getBean("userDao", UserDao.class);
-		dao.insert(new UserVO("dooly", "둘리", "남", "서울"));
+		//dao.insert(new UserVO("dooly", "둘리", "남", "서울"));
+		//dao.update(new UserVO("dooly", "둘리2", "여", "경기"));
+		//dao.delete("dooly");
 		
-		List<UserVO> list=dao.readAll();
+		/*List<UserVO> list=dao.readAll();
 		for (UserVO userVO : list) {
 			System.out.println(userVO);
-		}
+		}*/
+		
+		UserVO vo=dao.read("gildong");
+		System.out.println(vo);
 	}
 	
 	

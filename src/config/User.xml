@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="userNS">
-
+<!-- <mapper namespace="userNS"> Mapper 인터페이스 이용할때는 풀경로를 써야 한다.-->
+<mapper namespace="myspring.user.dao.UserMapper">
 	<select id="selectUserById" parameterType="string"  resultType="User">
 	 	select * from users where userid=#{id}
 	</select>
